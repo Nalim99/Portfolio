@@ -1,0 +1,208 @@
+* {
+  font-family: "Arial";
+  border: black dotted 0px; /*TESTING PURPOSE - REMOVE WHEN DONE*/
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  font-size: 10px;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 150px 150px 1fr;
+  grid-template-areas:
+  ". title title ."
+  ". quote quote ."
+  ". buttons buttons ."
+  ". contact contact ."
+  ". reveal reveal ."
+  ". content content ."
+  ". footer footer ."
+  ;
+}
+
+/* TITLE n QUOTE SECTION */
+
+.title {
+  grid-area: title;
+  line-height: 1;
+  letter-spacing: .5px;
+  text-align: center;
+  /* text prop */
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #7E7E7E;
+}
+
+.quote {
+  grid-area: quote;
+  text-align: center;
+  line-height: .8em;
+  letter-spacing: -2px;
+  padding-bottom: 0.1em;
+  /* text prop */
+  font-weight: 600;
+  font-size: 3em;
+  color: #353535;
+}
+
+/* BUTTONS SECTION */
+
+.buttons {
+  grid-area: buttons;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+li {
+  display: block;
+  float: left;
+  width: 33%;
+  line-height: 1.6em;
+  text-align: center;
+}
+
+a.button {
+  /* text prop */
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all ease-in .2s;
+  font-size: .8em;
+  font-weight: 600;
+  color: #ADADAD;
+}
+
+a.button:hover:after, a.button:hover:before {
+  content: " - ";
+}
+
+/* CONTACT SECTION */
+
+div.contact {
+  margin-top: 8em; /*.25em*/
+  grid-area: contact;
+  text-align: center;
+}
+
+#contactme {
+  font-size: 1em;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -.03em;
+  color: #353535;
+}
+
+#coloredcontact {
+  color: #488AC4;
+}
+
+/* move image source and title to here*/
+#linkedin {
+  height: 2.7em;
+  width: 2.7em;
+  margin-top: 1em;
+  margin-left: 1.8em;
+  margin-right: 1.8em;
+}
+
+/* REVEAL SECTION */
+
+.reveal {
+  grid-area: reveal;
+  text-align: center;
+  padding-top: 30em;
+}
+
+#arrowtext {
+  line-height: .8em;
+  letter-spacing: -.1em;
+  font-size: 1.7em;
+  font-weight: 600;
+  color: #353535;
+}
+
+#arrow {
+    height: 18;
+    width: 18;
+}
+
+.animateArrow {
+  animation: animateArrow 5s infinite;
+}
+
+@keyframes animateArrow {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transform: translateY(-.2em);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(.2em);
+  }
+}
+
+/* CONTENT SECTION */
+/* includes things like: portfolio- and about me content */
+
+.content {
+  grid-area: content;
+  background-color: #488AC4;
+}
+
+/* FOOTER SECTION */
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  font-size: .7em;
+  color: #A9A9A9;
+}
+
+@media screen and (min-width: 540px) {
+  .grid {
+    font-size: 14px;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 270px 270px 1fr;
+    grid-template-areas:
+    ". title title ."
+    "quote quote quote quote"
+    "buttons buttons buttons buttons"
+    "contact contact contact contact"
+    "reveal reveal reveal reveal"
+    "content content content content"
+    "footer footer footer footer"
+    ;
+  }
+
+  #arrow {
+      height: 35;
+      width: 35;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  .grid {
+    font-size: 14px;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 270px 270px 270px 270px 1fr;
+    grid-template-areas:
+    ". . title title . ."
+    ". quote quote quote quote ."
+    ". buttons buttons buttons buttons ."
+    ". . contact contact . ."
+    ". . reveal reveal . ."
+    ". . content content . ."
+    ". footer footer footer footer ."
+    ;
+  }
+
+  #arrow {
+      height: 35;
+      width: 35;
+  }
+}

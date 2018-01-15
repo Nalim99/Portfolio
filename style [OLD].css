@@ -1,0 +1,106 @@
+* {
+  font-family: "Arial";
+  border: black dotted .2px;
+}
+
+.web {
+  height: 97vh;
+  display: grid;
+  grid-template-rows: 10vh [title] 7vh [buttons] 3vh [contact] 10vh 20vh;
+  grid-template-columns: 20vw [content-start] 20vw 20vw 20vw [content-end] 20vw;
+}
+
+/* START OF SECITON: */
+/* INDEX > CONTENT > TITLE */
+
+div.title {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+  grid-row-start: title;
+  grid-row-end: buttons;
+
+  text-align: center;
+}
+
+p.title {
+  font-weight: 600;
+  margin: 0px;
+}
+
+#title-name {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: .5px;
+  color: #7E7E7E;
+}
+
+#title-quote {
+  font-size: 45px;
+  letter-spacing: -2px;
+  color: #353535;
+}
+
+/* START OF SECITON: */
+/* INDEX > CONTENT > LIST-BUTTONS */
+
+div.buttons {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+  grid-row-start: buttons;
+  grid-row-end: contact;
+}
+
+/*id = #buttonbar*/
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+ul>li {
+  display: block;
+  float: left;
+  width: 25%;
+  line-height: 3vh;
+  text-align: center;
+  position: relative;
+}
+
+ul>li>a {
+  float: left;
+  position: relative;
+  color: #ADADAD;
+  border-bottom: #ADADAD solid 0px; /*unfinished*/
+  min-width: 23%;
+  width: 23%;
+  margin-left: 38.5%;
+  margin-right: 38.5%;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+
+  transition: all ease-in-out .2s;
+}
+
+a:hover {
+  color: #488AC4; /*40ACE2    7DE552*/
+  border-bottom: #488AC4 solid 2px; /*unfinished*/
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+a:link {
+
+}
+
+a:visited {
+
+}
+
+a:active {
+  color: blue;
+}
