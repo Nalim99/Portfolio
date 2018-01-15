@@ -67,11 +67,20 @@ li {
   text-align: center;
 }
 
+a.homebutton {
+  display: block;
+  float: left;
+  width: 15%;
+  margin-left: 42.5%;
+  margin-right: 42.5%;
+  line-height: 1.6em;
+  text-align: center;
+}
+
 a.button {
   /* text prop */
   text-decoration: none;
   text-transform: uppercase;
-  transition: all ease-in .2s;
   font-size: .8em;
   font-weight: 600;
   color: #ADADAD;
@@ -112,7 +121,7 @@ div.contact {
 
 #arrowtext {
   line-height: .8em;
-  letter-spacing: -.1em;
+  letter-spacing: -.08em;
   font-size: 1.7em;
   font-weight: 600;
   color: #353535;
@@ -142,6 +151,11 @@ div.contact {
 .content {
   grid-area: content;
   background-color: #488AC4;
+}
+
+.test {
+  background-color: red;
+  opacity: .5;
 }
 
 /* FOOTER SECTION */
