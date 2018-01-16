@@ -1,0 +1,47 @@
+-general-
+1) mail contact option
+2) breakline between content and footer
+3) revealtext arrow clickable to slide down
+4) JavaScript animated title text (insert title here)
+5) Fonts: Helvetica, Arial, Product Sans (or premium: Futura (Pro))
+
+
+
+---------
+-home-
+1) content copied from content and aboutme pages
+
+
+
+
+
+
+
+---------
+-portfolio-
+1) work created in front-end
+
+
+
+
+
+
+
+---------
+-aboutme-
+1) Friendly introduction text about me including a picture
+2) Personal projects: Google Spreadsheets, Computer building, Home automation, Gaming, Pixel 2 <3
+3) Goals: Automate everything!, RL efficiencyScape (Lean thinking), Neurelnetwork and A.I. jobs
+4) Ikigai diagram, spread out in words/pharagraphs
+
+
+
+
+---------
+-resume-
+1) reduced resume info?
+2) cleaner resume look
+3) smaller resume descriptions (Job and School), add HAVO description
+4) include skills, knowledge (courses, e-learning, personal growth) and maybe key values section
+5) shortened personal info (remove married, drivers license, ?)
+6) include knowledge or experiences gained from position
