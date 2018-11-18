@@ -4,24 +4,14 @@
 <html>
   <head></head>
   <body>
-    <!--
-    BEFORE RUNNING:
-    1. If not already done, enable the Google Sheets API
-       and check the quota for your project at
-       https://console.developers.google.com/apis/api/sheets
-    2. Get access keys for your application. See
-       https://developers.google.com/api-client-library/javascript/start/start-js#get-access-keys-for-your-application
-    3. For additional information on authentication, see
-       https://developers.google.com/sheets/api/quickstart/js#step_2_set_up_the_sample
-    -->
     <script>
     function makeApiCall() {
       var params = {
         // The ID of the spreadsheet to retrieve data from.
-        spreadsheetId: '1ZU1MBSP7Jm9SMm0Kc6rN_n_8Sy3aEFXi-W5sK3hVSo8',  // TODO: Update placeholder value.
+        spreadsheetId: '1Y3GAxQsQ2aI8L2IsE3IaLFmq50TMp-CrhAHlM2LVyz8',
 
         // The A1 notation of the values to retrieve.
-        range: 'Sheet1',  // TODO: Update placeholder value.
+        range: 'variables',
 
         // How values should be represented in the output.
         // The default render option is ValueRenderOption.FORMATTED_VALUE.
@@ -45,16 +35,9 @@
     }
 
     function initClient() {
-      var API_KEY = 'AIzaSyBDcl27C7QQHPAQz4ffNkBeBYsCfut3ETQ';  // TODO: Update placeholder with desired API key.
-
-      var CLIENT_ID = '451703248333-95grs8i6s7u4ko3jq863tegi6uor3kt0.apps.googleusercontent.com';  // TODO: Update placeholder with desired client ID.
-
-      // TODO: Authorize using one of the following scopes:
-      //   'https://www.googleapis.com/auth/drive'
-      //   'https://www.googleapis.com/auth/drive.file'
-      //   'https://www.googleapis.com/auth/drive.readonly'
-      //   'https://www.googleapis.com/auth/spreadsheets'
-      //   'https://www.googleapis.com/auth/spreadsheets.readonly'
+      var API_KEY = 'AIzaSyAt6pPPztoqBfzKlTn3KUee-EwgHcTUm7s';
+      var CLIENT_ID = '89051567721-qgvelonlq65f70qb8udfpqvk74op8df9.apps.googleusercontent.com';
+      //          'https://www.googleapis.com/auth/spreadsheets' for write
       var SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
 
       gapi.client.init({
@@ -87,8 +70,10 @@
     }
 
     function populateSheet(result) {
-          document.getElementById("current").textContent = result.values[0][1];
-          document.getElementById("weekbudget").textContent = result.values[1][1];
+      document.getElementById("monthBudget").textContent = result.values[11][2];
+      document.getElementById("monthBudgetCurrent").textContent = result.values[22][2];
+      document.getElementById("weekBudget").textContent = result.values[12][2];
+      document.getElementById("weekBudgetCurrent").textContent = result.values[21][2];
     }
 
     </script>
@@ -106,8 +91,8 @@
       <!-- CARD 1 -->
       <div class="card crd1">
         <p class="crd_title">27th of Oct</p>
-        <p class="r_al r_pd"><span class="num">&euro;</span><span class="num num-lrg">125.95</span><span class="num num-obs"> / &euro;370.93</span></p>
-        <p class="r_al r_pd"><span class="num">&euro;</span><span class="num" id="current">0.00</span><span class="num num-obs"> / &euro;88.76</span></p>
+        <p class="r_al r_pd"><span class="num">&euro;</span><span class="num num-lrg" id="monthBudgetCurrent">0.00</span><span class="num num-obs"> / </span><span class="num num-obs" id="monthkBudget">0.00</span></p>
+        <p class="r_al r_pd"><span class="num" id="weekBudgetCurrent">0.00</span><span class="num num-obs"> / </span><span class="num num-obs" id="weekBudget">0.00</span></p>
       </div>
       <!-- CARD 2 -->
       <div class="card crd2">
