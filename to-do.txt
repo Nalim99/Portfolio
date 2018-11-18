@@ -3,9 +3,9 @@
 2) breakline between content and footer
 3) revealtext arrow clickable to slide down
 4) JavaScript animated title text (insert title here)
-5) Fonts: Helvetica, Arial, Product Sans (or premium: Futura (Pro))
-
-
+5) Fonts: Helvetica, Arial, Product Sans (or premium: Futura (Pro)) + Graphik & Avalon
+6) Side titles <title>
+7) type-writer style: change 'connect on LinkedIn' to 'send me an email' to 'dm me on instagram'
 
 ---------
 -home-

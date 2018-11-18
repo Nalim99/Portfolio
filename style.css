@@ -1,23 +1,21 @@
 * {
   font-family: "Arial";
-  border: black dotted 0px; /*TESTING PURPOSE - REMOVE WHEN DONE*/
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .grid {
   font-size: 10px;
   margin-top: 100px;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 150px 150px 1fr;
   grid-template-areas:
   ". title title ."
   ". quote quote ."
   ". buttons buttons ."
-  ". contact contact ."
   ". reveal reveal ."
-  ". content content ."
-  ". footer footer ."
   ;
 }
 
@@ -27,7 +25,7 @@
   grid-area: title;
   line-height: 1;
   letter-spacing: .5px;
-  text-align: center;
+  padding: 0.25em 0;
   /* text prop */
   font-weight: 600;
   font-size: 1em;
@@ -37,86 +35,76 @@
 
 .quote {
   grid-area: quote;
-  text-align: center;
-  line-height: .8em;
   letter-spacing: -2px;
-  padding-bottom: 0.1em;
+  padding: 0.8em 0 0.4em;
   /* text prop */
   font-weight: 600;
-  font-size: 3em;
+  font-size: 5em;
   color: #353535;
 }
 
 /* BUTTONS SECTION */
 
-.buttons {
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div.buttons {
+  margin-top: 8em; /*.25em*/
   grid-area: buttons;
 }
 
-ul {
-  list-style-type: none;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-li {
-  display: block;
-  float: left;
-  width: 33%;
-  line-height: 1.6em;
-  text-align: center;
-}
-
-a.homebutton {
-  display: block;
-  float: left;
-  width: 15%;
-  margin-left: 42.5%;
-  margin-right: 42.5%;
-  line-height: 1.6em;
-  text-align: center;
-}
-
-a.button {
-  /* text prop */
+.button {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: .8em;
+  margin: 1em 0 0;
+  width: 15em;
+  height: 3em;
+  /* text */
   font-weight: 600;
-  color: #ADADAD;
+  /* border */
+  border: black solid 2px;
+  /* button */
+  background-color: inherit;
 }
 
-a.button:hover:after, a.button:hover:before {
-  content: " - ";
-}
-
-/* CONTACT SECTION */
-
-div.contact {
-  margin-top: 8em; /*.25em*/
-  grid-area: contact;
-  text-align: center;
+#sheets {
+  border-color: #1EA363;
+  color: #1EA363;
 }
 
 #contactme {
-  font-size: 1em;
-  font-weight: 600;
-  font-style: italic;
-  letter-spacing: -.03em;
-  color: #353535;
+  border-color: #488AC4;
+  color: #488AC4;
 }
 
-#linkedin {
-  color: #488AC4;
-  text-decoration: none;
+.button:hover {
+  cursor: pointer;
+  border: white solid 2px;
+}
+
+#sheets:hover {
+  background-color: #1EA363;
+  border: #1EA363 solid 2px;
+  color: white;
+}
+
+#contactme:hover {
+  background-color: #488AC4;
+  border: #488AC4 solid 2px;
+  color: white;
 }
 
 /* REVEAL SECTION */
 
 .reveal {
   grid-area: reveal;
-  text-align: center;
-  padding-top: 30em;
+  padding-top: 55em;
 }
 
 #arrowtext {
@@ -145,48 +133,29 @@ div.contact {
   }
 }
 
-/* CONTENT SECTION */
-/* includes things like: portfolio- and about me content */
-
-.content {
-  grid-area: content;
-  background-color: #488AC4;
-}
-
-.test {
-  background-color: red;
-  opacity: .5;
-}
-
-/* FOOTER SECTION */
-
-.footer {
-  grid-area: footer;
-  text-align: center;
-  font-size: .7em;
-  color: #A9A9A9;
-}
-
 @media screen and (min-width: 540px) {
   .grid {
     font-size: 14px;
     margin-top: 100px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 270px 270px 1fr;
     grid-template-areas:
     ". title title ."
     "quote quote quote quote"
     "buttons buttons buttons buttons"
-    "contact contact contact contact"
     "reveal reveal reveal reveal"
-    "content content content content"
-    "footer footer footer footer"
     ;
   }
 
   #arrow {
       height: 35;
       width: 35;
+  }
+
+  .reveal {
+    grid-area: reveal;
+    padding-top: 25em;
   }
 }
 
@@ -194,21 +163,24 @@ div.contact {
   .grid {
     font-size: 14px;
     margin-top: 100px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 270px 270px 270px 270px 1fr;
     grid-template-areas:
     ". . title title . ."
     ". quote quote quote quote ."
     ". buttons buttons buttons buttons ."
-    ". . contact contact . ."
     ". . reveal reveal . ."
-    ". . content content . ."
-    ". footer footer footer footer ."
     ;
   }
 
   #arrow {
       height: 35;
       width: 35;
+  }
+
+  .reveal {
+    grid-area: reveal;
+    padding-top: 25em;
   }
 }

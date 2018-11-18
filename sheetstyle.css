@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Roboto", "Arial";
+}
+
+body {
+  background-color: #282C34;
+  color: #EDEDF2; /*F2F2F7*/
+}
+
+.grid {
+  padding: 2em;
+  width: 100%;
+  display: grid;
+  /*grid-template-columns: 5px;*/
+  grid-template-areas:
+  "crd1"
+  "crd2"
+  "crd3"
+  "crd4"
+  "crdlog"
+  ;
+}
+
+/* ------------------
+    TEXT SECTION
+------------------ */
+
+p {
+    /* padding: 0.5rem 0 0.1em; */
+    /* text-align: center;
+    font-family: "Roboto", "Arial"; */
+}
+
+.r_al {
+  text-align: right;
+}
+
+.r_pd {
+  padding-right: 1em;
+}
+
+.crd_title {
+  font-size: 2.5rem;
+  margin: 1rem 0 0;
+}
+
+.num {
+  font-family: "Roboto", "Inconsolata";
+  font-size: 3rem;
+  letter-spacing: -0.05em;
+}
+
+.num-fll {
+  font-size: 15rem;
+  padding: 0.61rem 0;
+  vertical-align: middle;
+}
+
+.num-lrg {
+  font-size: 8rem;
+}
+
+.num-obs {
+  font-size: 2rem;
+  color: #919296;
+}
+
+/* ------------------
+    TABLE SECTION
+------------------ */
+
+table {
+  /* border: 1px solid #EDEDF2;*/
+  width: 100%;
+  height: 53.75em;
+  padding: 1em;
+}
+
+td {
+  font-size: 3rem;
+  text-align: left;
+}
+
+.td-date {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.td-price {
+  font-size: 2.8rem;
+  text-align: right;
+}
+
+/* ------------------
+    BUTTON SECTION
+------------------ */
+
+.sign {
+  background-color: inherit;
+  color: inherit;
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ------------------
+    CARD SECTION
+------------------ */
+
+.crd1 {
+    grid-area: crd1;
+    height: 19.08em;
+    /*border: 0px;
+    border-top: 0.2em solid;
+    border-image: linear-gradient(to right, rgb(0, 210, 255), rgb(58, 123, 213));
+    border-image-slice: 1;*/
+}
+
+.crd2 {
+    grid-area: crd2;
+    height: 57.25em;
+}
+
+.crd3 {
+    grid-area: crd3;
+    height: 19.08em;
+}
+
+.crd4 {
+    grid-area: crd4;
+    height: 57.25em;
+}
+
+.crdlog {
+    grid-area: crdlog;
+    height: 7.15em;
+}
+
+.card {
+  background-color: #21252B;
+  border-radius: 0.4em;
+  margin-bottom: 2rem;
+  display: inline-block;
+  width: 57.25em;
+  /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
+  box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.crd-light {
+  background-color: rgba(33, 37, 43, 0.35);
+  color: rgba(237, 237, 242, 0.65);
+}
+
+/* ------------------
+    BUTTONS SECTION
+    (OLD)
+------------------ */
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div.buttons {
+  margin-top: 8em; /*.25em*/
+  grid-area: buttons;
+}
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 1em 0 0;
+  width: 15em;
+  height: 3em;
+  /* text */
+  font-weight: 600;
+  /* border */
+  border: black solid 2px;
+  /* button */
+  background-color: inherit;
+}
+
+#greenbutton {
+  border-color: #1EA363;
+  color: #1EA363;
+}
+
+.button:hover {
+  cursor: pointer;
+  border: white solid 2px;
+}
+
+#greenbutton:hover {
+  background-color: #1EA363;
+  border: #1EA363 solid 2px;
+  color: white;
+}
+
+/* ------------------
+    MEDIA SECTION
+------------------ */
+
+@media (min-width: 1080px) {
+  .grid {
+    font-size: 14px;
+    margin-top: 1em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 270px 270px 270px 270px 1fr;
+    grid-template-areas:
+    ". . title title . ."
+    ". quote quote quote quote ."
+    ". buttons buttons buttons buttons ."
+    ". . reveal reveal . ."
+    ;
+  }
+
+  body {
+    background-color: blue;
+  }
+}
