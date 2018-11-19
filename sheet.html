@@ -70,10 +70,12 @@
     }
 
     function populateSheet(result) {
+      document.getElementById("date").textContent = result.values[1][2];
       document.getElementById("monthBudget").textContent = result.values[11][2];
       document.getElementById("monthBudgetCurrent").textContent = result.values[22][2];
       document.getElementById("weekBudget").textContent = result.values[12][2];
       document.getElementById("weekBudgetCurrent").textContent = result.values[21][2];
+      document.getElementById("buffer").textContent = result.values[14][2];
     }
 
     </script>
@@ -90,8 +92,8 @@
     <div class="grid">
       <!-- CARD 1 -->
       <div class="card crd1">
-        <p class="crd_title">27th of Oct</p>
-        <p class="r_al r_pd"><span class="num">&euro;</span><span class="num num-lrg" id="monthBudgetCurrent">0.00</span><span class="num num-obs"> / </span><span class="num num-obs" id="monthkBudget">0.00</span></p>
+        <p class="crd_title" id="date">xxth of Mnt</p>
+        <p class="r_al r_pd"><span class="num">&euro;</span><span class="num num-lrg" id="monthBudgetCurrent">0.00</span><span class="num num-obs"> / </span><span class="num num-obs" id="monthBudget">0.00</span></p>
         <p class="r_al r_pd"><span class="num" id="weekBudgetCurrent">0.00</span><span class="num num-obs"> / </span><span class="num num-obs" id="weekBudget">0.00</span></p>
       </div>
       <!-- CARD 2 -->
@@ -118,7 +120,7 @@
               <td class="td-date">25/04</td><td>Money from Bryan</td><td class="td-price">-&euro;13</td>
             </tr>
             <tr>
-              <td class="td-date">/</td><td>Insufficient creativity</td><td class="td-price">-&euro;50</td>
+              <td class="td-date"></td><td></td><td class="td-price"></td>
             </tr>
             <tr>
               <td class="td-date"></td><td></td><td class="td-price"></td>
@@ -137,11 +139,15 @@
       </div>
       <!-- CARD 3 -->
       <div class="card crd3 crd-light">
-        <p class="num num-fll">&euro;300</P>
+        <p class="num num-fll" id="buffer">&euro;0</P>
       </div>
       <!-- CARD 4 -->
       <div class="card crd4">
         <p class="crd_title">Pending</p>
+      </div>
+      <!-- CARD 5 -->
+      <div class="card crd5">
+        <p class="crd_title">Test</p>
       </div>
       <!-- CARD 99 -->
       <div class="card crdlog">

@@ -8,8 +8,15 @@
 }
 
 body {
-  background-color: #282C34;
-  color: #EDEDF2; /*F2F2F7*/
+  background-color: var(--color-light);
+  color: #EDEDF2;  /*F2F2F7*/
+}
+
+:root {
+  --color-dark: #21252B;
+  --color-light: #282C34;
+  --shadow-dark: 0 15px 15px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  --shadow-light: 0 6px 12px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .grid {
@@ -22,6 +29,7 @@ body {
   "crd2"
   "crd3"
   "crd4"
+  "crd5"
   "crdlog"
   ;
 }
@@ -82,17 +90,16 @@ table {
 }
 
 td {
-  font-size: 3rem;
+  font-size: 2.8rem;
   text-align: left;
 }
 
 .td-date {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 .td-price {
-  font-size: 2.8rem;
   text-align: right;
 }
 
@@ -134,6 +141,11 @@ td {
 
 .crd4 {
     grid-area: crd4;
+    height: 42.94em;
+}
+
+.crd5 {
+    grid-area: crd5;
     height: 57.25em;
 }
 
@@ -143,13 +155,13 @@ td {
 }
 
 .card {
-  background-color: #21252B;
+  background-color: var(--color-dark);
   border-radius: 0.4em;
   margin-bottom: 2rem;
   display: inline-block;
   width: 57.25em;
   /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
-  box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: var(--shadow-dark);
 }
 
 .crd-light {
