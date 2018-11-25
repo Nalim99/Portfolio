@@ -1,5 +1,8 @@
 <link rel="stylesheet" type="text/css" href="sheetstyle.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto:100|Roboto:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Condensed:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Mono:100" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <html>
   <head></head>
@@ -76,6 +79,8 @@
       document.getElementById("weekBudget").textContent = result.values[12][2];
       document.getElementById("weekBudgetCurrent").textContent = result.values[21][2];
       document.getElementById("buffer").textContent = result.values[14][2];
+      document.getElementById("test1").textContent = result.values[31][2];
+      document.getElementById("test2").textContent = result.values[32][2];
     }
 
     </script>
@@ -90,64 +95,85 @@
     <p class="quote">weekbudget <span id="current"></span> / <span id="weekbudget"></span></p>
 -->
     <div class="grid">
-      <!-- CARD 1 -->
-      <div class="card crd1">
-        <p class="crd_title" id="date">xxth of Mnt</p>
-        <p class="r_al r_pd"><span class="num">&euro;</span><span class="num num-lrg" id="monthBudgetCurrent">0.00</span><span class="num num-obs"> / </span><span class="num num-obs" id="monthBudget">0.00</span></p>
-        <p class="r_al r_pd"><span class="num" id="weekBudgetCurrent">0.00</span><span class="num num-obs"> / </span><span class="num num-obs" id="weekBudget">0.00</span></p>
+      <!-- CARD OVERVIEW -->
+      <div class="card crd-overview">
+        <p class="crd-title" id="date">xxth of Mnt</p>
+        <div class="content">
+          <p><span class="txt">&euro;</span><span class="txt--lrg" id="monthBudgetCurrent">0.00</span><span class="txt--obs"> / </span><span class="txt--obs" id="monthBudget">0.00</span></p>
+          <p><span class="txt" id="weekBudgetCurrent">0.00</span><span class="txt--obs"> / </span><span class="txt--obs" id="weekBudget">0.00</span></p>
+        </div>
       </div>
-      <!-- CARD 2 -->
-      <div class="card crd2">
-        <p class="crd_title">Upcoming</p>
-        <table>
+      <!-- CARD SCHEDULED -->
+      <div class="card crd-scheduled">
+        <p class="crd-title">Scheduled</p>
+        <table class="tbl-scheduled">
           <tbody>
             <tr>
-              <td class="td-date">01/12</td><td>Upcoming transaction</td><td class="td-price">&euro;0</td>
+              <td class="num td-date txt--sml">01/12</td><td>Upcoming transaction</td><td class="num">55</td><td class="td-icon"><i class="material-icons">check</i></td>
             </tr>
             <tr>
-              <td class="td-date">04/11</td><td>Switch game</td><td class="td-price">&euro;60</td>
+              <td class="num td-date txt--sml">04/11</td><td>Switch game</td><td class="num">32</td><td class="td-icon"><i class="material-icons">check</i></td>
             </tr>
             <tr>
-              <td class="td-date">31/05</td><td>Cool gadget</td><td class="td-price">&euro;180</td>
+              <td class="num td-date txt--sml">31/05</td><td>Cool gadget</td><td class="num">-20</td><td class="td-icon"><i class="material-icons">check</i></td>
             </tr>
             <tr>
-              <td class="td-date">00/07</td><td>James Bond</td><td class="td-price">&euro;7</td>
+              <td class="num td-date txt--sml">00/07</td><td>James Bond</td><td class="num">18</td><td class="td-icon"><i class="material-icons">check</i></td>
             </tr>
             <tr>
-              <td class="td-date">05/08</td><td>Birthday present</td><td class="td-price">&euro;0</td>
+              <td class="num td-date txt--sml">05/08</td><td>Birthday present</td><td class="num">470</td><td class="td-icon"><i class="material-icons">check</i></td>
             </tr>
             <tr>
-              <td class="td-date">25/04</td><td>Money from Bryan</td><td class="td-price">-&euro;13</td>
+              <td class="num td-date txt--sml">25/04</td><td>Money from Ben</td><td class="num">-70</td><td class="td-icon"><i class="material-icons">check</i></td>
             </tr>
             <tr>
-              <td class="td-date"></td><td></td><td class="td-price"></td>
+              <td class="num td-date txt--sml"></td><td></td><td class="num"></td><td class="td-icon"><i class="material-icons">check</i></td>
             </tr>
             <tr>
-              <td class="td-date"></td><td></td><td class="td-price"></td>
+              <td class="num td-date txt--sml"></td><td></td><td class="num"></td><td class="td-icon"><i class="material-icons">check</i></td>
             </tr>
             <tr>
-              <td class="td-date"></td><td></td><td class="td-price"></td>
+              <td class="num td-date txt--sml"></td><td></td><td class="num"></td><td class="td-icon"><i class="material-icons">check</i></td>
             </tr>
             <tr>
-              <td class="td-date"></td><td></td><td class="td-price"></td>
+              <td class="num td-date txt--sml"></td><td></td><td class="num"></td><td class="td-icon"><i class="material-icons">check</i></td>
             </tr>
             <tr>
-              <td></td><td>Total</td><td class="td-price">&euro;1000</td>
+              <td></td><td>Total</td><td class="num">250</td>
             </tr>
           </tbody>
         </table>
       </div>
       <!-- CARD 3 -->
-      <div class="card crd3 crd-light">
-        <p class="num num-fll" id="buffer">&euro;0</P>
+      <div class="card crd3">
+        <p class="txt--xxl" id="buffer">&euro;0</P>
       </div>
       <!-- CARD 4 -->
       <div class="card crd4">
-        <p class="crd_title">Pending</p>
+        <p class="crd-title">Pending</p>
       </div>
-      <!-- CARD 5 -->
-      <div class="card crd5">
-        <p class="crd_title">Test</p>
+      <!-- CARD RECENT -->
+      <div class="card crd-recent">
+        <table class="tbl-recent">
+          <tbody>
+            <tr>
+              <td class="num td-date txt--sml">25/11</td><td>Lunch week 49</td><td class="num">-€2.07</td>
+            </tr>
+            <tr>
+              <td class="num td-date txt--sml">24/11</td><td>Cadeau Erik</td><td class="num" id="test1">-€10</td>
+            </tr>
+            <tr>
+              <td class="num td-date txt--sml">24/11</td><td>Avondeten</td><td class="num" id="test2">-€5.31</td>
+            </tr>
+            <tr>
+              <td class="num td-date txt--sml">24/11</td><td>Spaargeld</td><td class="num">-€350</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- CARD 6 -->
+      <div class="card crd6">
+        <p class="crd-title">Test</p>
       </div>
       <!-- CARD 99 -->
       <div class="card crdlog">
