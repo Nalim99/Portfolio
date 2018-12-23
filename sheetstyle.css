@@ -27,7 +27,7 @@ body {
   "crd-overview"
   "crd-scheduled"
   "crd3"
-  "crd4"
+  "crd-pending"
   "crd-recent"
   "crd6"
   "crdlog"
@@ -82,6 +82,24 @@ body {
   text-align: right;
 }
 
+.opr {
+  font-family: "Roboto Mono", "Monospace", "Arial";
+  text-align: right;
+  font-weight: 700;
+  color: #919296;
+}
+
+.material-icons.md-1 {
+  font-size: 3.3rem;
+}
+
+.material-icons.md-2 {
+  font-size: 9rem;
+  padding: 8.31rem 0 0 0;
+  display: block;
+  left: auto;
+  right: auto;
+}
 
 /* ------------------
     TESTING
@@ -99,11 +117,38 @@ td {
 }
 
 i {
-  font-size: 3.3rem !important;
+  font-size: 3.3rem;
   padding-right: 0;
   padding-left: 1em;
   text-align: right;
   color: #919296;
+}
+
+.pnd_flex {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row wrap;
+  padding: 0;
+}
+
+.pnd-1 {
+  font-size: 20rem;
+  order: 1;
+  height: 100%;
+  width: 25%;
+  text-align: left;
+}
+
+.pnd-2 {
+  order: 2;
+  height: 100%;
+  width: 75%;
+}
+
+#pnd-icon {
+    width: 12rem;
+    height: 12rem;
+    color: #EDEDF2;
 }
 
 .tbl-scheduled {
@@ -120,6 +165,10 @@ i {
 
 .td-icon {
   width: 2em;
+}
+
+.td-test {
+  width: 4.22em;
 }
 
 /* ------------------
@@ -160,9 +209,9 @@ i {
     height: 19.08em;
 }
 
-.crd4 {
-    grid-area: crd4;
-    height: 42.94em;
+.crd-pending {
+    grid-area: crd-pending;
+    height: 28.63em;
 }
 
 .crd-recent {
@@ -244,20 +293,20 @@ div.buttons {
 
 @media (min-width: 1080px) {
   .grid {
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 1em;
+    justify-items: center;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 270px 270px 270px 270px 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-    ". . title title . ."
-    ". quote quote quote quote ."
-    ". buttons buttons buttons buttons ."
-    ". . reveal reveal . ."
+    "crd-overview"
+    "crd-scheduled"
+    "crd3"
+    "crd-pending"
+    "crd-recent"
+    "crd6"
+    "crdlog"
     ;
-  }
-
-  * {
-    background-color: white;
   }
 }

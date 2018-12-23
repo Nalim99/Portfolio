@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="sheetstyle.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto:100|Roboto:300" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Condensed:300" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Mono:100" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Mono:100|Roboto+Mono:700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <html>
@@ -79,8 +79,55 @@
       document.getElementById("weekBudget").textContent = result.values[12][2];
       document.getElementById("weekBudgetCurrent").textContent = result.values[21][2];
       document.getElementById("buffer").textContent = result.values[14][2];
-      document.getElementById("test1").textContent = result.values[31][2];
-      document.getElementById("test2").textContent = result.values[32][2];
+      //Scheduled table
+      document.getElementById("schd-d-1").textContent = result.values[30][1];
+      document.getElementById("schd-i-1").textContent = result.values[30][2];
+      document.getElementById("schd-o-1").textContent = result.values[30][3];
+      document.getElementById("schd-p-1").textContent = result.values[30][4];
+      document.getElementById("schd-d-2").textContent = result.values[31][1];
+      document.getElementById("schd-i-2").textContent = result.values[31][2];
+      document.getElementById("schd-o-2").textContent = result.values[31][3];
+      document.getElementById("schd-p-2").textContent = result.values[31][4];
+      document.getElementById("schd-d-3").textContent = result.values[32][1];
+      document.getElementById("schd-i-3").textContent = result.values[32][2];
+      document.getElementById("schd-o-3").textContent = result.values[32][3];
+      document.getElementById("schd-p-3").textContent = result.values[32][4];
+      document.getElementById("schd-d-4").textContent = result.values[33][1];
+      document.getElementById("schd-i-4").textContent = result.values[33][2];
+      document.getElementById("schd-o-4").textContent = result.values[33][3];
+      document.getElementById("schd-p-4").textContent = result.values[33][4];
+      document.getElementById("schd-d-5").textContent = result.values[34][1];
+      document.getElementById("schd-i-5").textContent = result.values[34][2];
+      document.getElementById("schd-o-5").textContent = result.values[34][3];
+      document.getElementById("schd-p-5").textContent = result.values[34][4];
+      document.getElementById("schd-d-6").textContent = result.values[35][1];
+      document.getElementById("schd-i-6").textContent = result.values[35][2];
+      document.getElementById("schd-o-6").textContent = result.values[35][3];
+      document.getElementById("schd-p-6").textContent = result.values[35][4];
+      document.getElementById("schd-d-7").textContent = result.values[36][1];
+      document.getElementById("schd-i-7").textContent = result.values[36][2];
+      document.getElementById("schd-o-7").textContent = result.values[36][3];
+      document.getElementById("schd-p-7").textContent = result.values[36][4];
+
+      document.getElementById("schd-o-t").textContent = result.values[41][3];
+      document.getElementById("schd-p-t").textContent = result.values[41][4];
+      //Recent table
+      document.getElementById("rec-d-1").textContent = result.values[43][1];
+      document.getElementById("rec-i-1").textContent = result.values[43][2];
+      document.getElementById("rec-o-1").textContent = result.values[43][3];
+      document.getElementById("rec-p-1").textContent = result.values[43][4];
+      document.getElementById("rec-d-2").textContent = result.values[44][1];
+      document.getElementById("rec-i-2").textContent = result.values[44][2];
+      document.getElementById("rec-o-2").textContent = result.values[44][3];
+      document.getElementById("rec-p-2").textContent = result.values[44][4];
+      document.getElementById("rec-d-3").textContent = result.values[45][1];
+      document.getElementById("rec-i-3").textContent = result.values[45][2];
+      document.getElementById("rec-o-3").textContent = result.values[45][3];
+      document.getElementById("rec-p-3").textContent = result.values[45][4];
+      document.getElementById("rec-d-4").textContent = result.values[46][1];
+      document.getElementById("rec-i-4").textContent = result.values[46][2];
+      document.getElementById("rec-o-4").textContent = result.values[46][3];
+      document.getElementById("rec-p-4").textContent = result.values[46][4];
     }
 
     </script>
@@ -109,37 +156,37 @@
         <table class="tbl-scheduled">
           <tbody>
             <tr>
-              <td class="num td-date txt--sml">01/12</td><td>Upcoming transaction</td><td class="num">55</td><td class="td-icon"><i class="material-icons">check</i></td>
+              <td class="num td-date txt--sml" id="schd-d-1"></td><td id="schd-i-1"></td><td class="opr" id="schd-o-1"></td><td class="num" id="schd-p-1"></td><td class="td-icon"><i class="material-icons md-1">check</i></td>
             </tr>
             <tr>
-              <td class="num td-date txt--sml">04/11</td><td>Switch game</td><td class="num">32</td><td class="td-icon"><i class="material-icons">check</i></td>
+              <td class="num td-date txt--sml" id="schd-d-2"></td><td id="schd-i-2"></td><td class="opr" id="schd-o-2"></td><td class="num" id="schd-p-2"></td><td class="td-icon"><i class="material-icons md-1">check</i></td>
             </tr>
             <tr>
-              <td class="num td-date txt--sml">31/05</td><td>Cool gadget</td><td class="num">-20</td><td class="td-icon"><i class="material-icons">check</i></td>
+              <td class="num td-date txt--sml" id="schd-d-3"></td><td id="schd-i-3"></td><td class="opr" id="schd-o-3"></td><td class="num" id="schd-p-3"></td><td class="td-icon"><i class="material-icons md-1">check</i></td>
             </tr>
             <tr>
-              <td class="num td-date txt--sml">00/07</td><td>James Bond</td><td class="num">18</td><td class="td-icon"><i class="material-icons">check</i></td>
+              <td class="num td-date txt--sml" id="schd-d-4"></td><td id="schd-i-4"></td><td class="opr" id="schd-o-4"></td><td class="num" id="schd-p-4"></td><td class="td-icon"><i class="material-icons md-1">check</i></td>
             </tr>
             <tr>
-              <td class="num td-date txt--sml">05/08</td><td>Birthday present</td><td class="num">470</td><td class="td-icon"><i class="material-icons">check</i></td>
+              <td class="num td-date txt--sml" id="schd-d-5"></td><td id="schd-i-5"></td><td class="opr" id="schd-o-5"></td><td class="num" id="schd-p-5"></td><td class="td-icon"><i class="material-icons md-1">check</i></td>
             </tr>
             <tr>
-              <td class="num td-date txt--sml">25/04</td><td>Money from Ben</td><td class="num">-70</td><td class="td-icon"><i class="material-icons">check</i></td>
+              <td class="num td-date txt--sml" id="schd-d-6"></td><td id="schd-i-6"></td><td class="opr" id="schd-o-6"></td><td class="num" id="schd-p-6"></td><td class="td-icon"><i class="material-icons md-1">check</i></td>
             </tr>
             <tr>
-              <td class="num td-date txt--sml"></td><td></td><td class="num"></td><td class="td-icon"><i class="material-icons">check</i></td>
+              <td class="num td-date txt--sml" id="schd-d-7"></td><td id="schd-i-7"></td><td class="opr" id="schd-o-7"></td><td class="num" id="schd-p-7"></td><td class="td-icon"><i class="material-icons md-1">check</i></td>
             </tr>
             <tr>
-              <td class="num td-date txt--sml"></td><td></td><td class="num"></td><td class="td-icon"><i class="material-icons">check</i></td>
+              <td class="num td-date txt--sml"></td><td></td><td class="num"></td><td class="opr" id=""></td><td class="td-icon"><i class="material-icons md-1">check</i></td>
             </tr>
             <tr>
-              <td class="num td-date txt--sml"></td><td></td><td class="num"></td><td class="td-icon"><i class="material-icons">check</i></td>
+              <td class="num td-date txt--sml"></td><td></td><td class="num"></td><td class="opr" id=""></td><td class="td-icon"><i class="material-icons md-1">check</i></td>
             </tr>
             <tr>
-              <td class="num td-date txt--sml"></td><td></td><td class="num"></td><td class="td-icon"><i class="material-icons">check</i></td>
+              <td class="num td-date txt--sml"></td><td></td><td class="num"></td><td class="opr" id=""></td><td class="td-icon"><i class="material-icons md-1">check</i></td>
             </tr>
             <tr>
-              <td></td><td>Total</td><td class="num">250</td>
+              <td></td><td>Total</td><td class="opr" id="schd-o-t">-&euro;</td><td class="num" id="schd-p-t"></td>
             </tr>
           </tbody>
         </table>
@@ -149,24 +196,44 @@
         <p class="txt--xxl" id="buffer">&euro;0</P>
       </div>
       <!-- CARD 4 -->
-      <div class="card crd4">
-        <p class="crd-title">Pending</p>
+      <div class="card crd-pending">
+        <div class="pnd_flex">
+          <div class="pnd-1">
+            <i class="material-icons md-2" id="pnd-icon">outlined_flag</i>
+          </div>
+          <div class="pnd-2">
+            <table class="tbl-recent">
+              <tr>
+                <td class="num td-date td-test txt--sml">20/12</td><td>item</td>
+              </tr>
+              <tr>
+                <td class="num td-date td-test txt--sml">20/12</td><td>item</td>
+              </tr>
+              <tr>
+                <td class="num td-date txt--sml">20/12</td><td>item</td>
+              </tr>
+              <tr>
+                <td class="num td-date txt--sml">20/12</td><td>item</td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
       <!-- CARD RECENT -->
       <div class="card crd-recent">
         <table class="tbl-recent">
           <tbody>
             <tr>
-              <td class="num td-date txt--sml">25/11</td><td>Lunch week 49</td><td class="num">-€2.07</td>
+              <td class="num td-date txt--sml" id="rec-d-1"></td><td id="rec-i-1"></td><td class="opr" id="rec-o-1"></td><td class="num" id="rec-p-1"></td>
             </tr>
             <tr>
-              <td class="num td-date txt--sml">24/11</td><td>Cadeau Erik</td><td class="num" id="test1">-€10</td>
+              <td class="num td-date txt--sml" id="rec-d-2"></td><td id="rec-i-2"></td><td class="opr" id="rec-o-2"></td><td class="num" id="rec-p-2"></td>
             </tr>
             <tr>
-              <td class="num td-date txt--sml">24/11</td><td>Avondeten</td><td class="num" id="test2">-€5.31</td>
+              <td class="num td-date txt--sml" id="rec-d-3"></td><td id="rec-i-3"></td><td class="opr" id="rec-o-3"></td><td class="num" id="rec-p-3"></td>
             </tr>
             <tr>
-              <td class="num td-date txt--sml">24/11</td><td>Spaargeld</td><td class="num">-€350</td>
+              <td class="num td-date txt--sml" id="rec-d-4"></td><td id="rec-i-4"></td><td class="opr" id="rec-o-4"></td><td class="num" id="rec-p-4"></td>
             </tr>
           </tbody>
         </table>
